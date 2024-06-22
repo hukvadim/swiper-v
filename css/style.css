@@ -53,8 +53,9 @@ swiper-slide img {
 }
 
 .book-text {
-	position: absolute;
+    position: absolute;
     padding: 20px;
     line-height: 1.64;
-    font-size: 15px;
+    font-size: 19px;
+    background-color: rgb(0 0 0 / 63%);
 }
