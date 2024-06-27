@@ -3,9 +3,9 @@
 
 <head>
     <meta charset="utf-8" />
-    <title>Swiper demo</title>
+    <title>Космічні саги</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1" />
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
@@ -44,10 +44,41 @@
             </div>
             <img src="./img/img-6.jpeg" alt="">
         </swiper-slide>
+        <swiper-slide>
+            <div class="book-text" style="bottom: 5%; font-size: 18px;">
+                У центрі нашої історії – боротьба за виживання і владу, яка розгортається на чотирьох планетах: <br> Луміна, Соларіс, Терра і Аква.
+            </div>
+            <img src="./img/img-7.jpeg" alt="">
+        </swiper-slide>
+        <swiper-slide>
+            <div class="book-text" style="top: 30%;font-size: 20px;">
+                Хто з них переможе – отримає ключ до нового світу, Атлантіс, де кожна раса зможе жити вільно і безконфліктно.
+            </div>
+            <img src="./img/img-8.jpg" alt="">
+        </swiper-slide>
+        <swiper-slide>
+            <div class="book-text" style="bottom: 0;font-size: 20px;">
+                Перемога, як це часто буває, залежить від кількох обраних, котрі, на перший погляд, всього лише підлітки, але у кожного з них є своя таємниця, своє призначення і свій шлях.
+            </div>
+            <img src="./img/img-9.jpeg" alt="">
+        </swiper-slide>
     </swiper-container>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <script src="./js/swiper-element-bundle.min.js"></script>
+    <script>
+        // Отримати збережений індекс з localStorage або встановити на 0, якщо його немає
+        const savedIndex = localStorage.getItem('swiperIndex') || 0;
+
+        const swiper = document.querySelector('.mySwiper').swiper;
+
+        swiper.slideTo(savedIndex, 0, false);
+
+        swiper.on('slideChange', function () {
+            // Зберегти поточний індекс у localStorage при зміні слайду
+            localStorage.setItem('swiperIndex', swiper.activeIndex);
+        });
+    </script>
 </body>
 
 </html>
